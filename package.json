@@ -1,0 +1,30 @@
+{
+    "name": "linkstorm-link-injection-demo",
+    "version": "1.0.0",
+    "description": "Cloudflare Worker serving opportunities from JSON",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "dev": "wrangler dev",
+        "start": "wrangler dev",
+        "deploy": "npm run build && wrangler deploy",
+        "test": "vitest",
+        "build": "node scripts/csv-to-json.js",
+        "csv2json": "node scripts/csv-to-json.js"
+    },
+    "keywords": [
+        "cloudflare",
+        "worker",
+        "json",
+        "serverless"
+    ],
+    "author": "Shyam Verma",
+    "license": "MIT",
+    "devDependencies": {
+        "csv-parse": "^5.5.3",
+        "node-fetch": "^3.3.2",
+        "@cloudflare/vitest-pool-workers": "^0.8.19",
+        "vitest": "~3.0.7",
+        "wrangler": "^4.14.1"
+    }
+}
